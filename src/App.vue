@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import EmblaCarousel from './components/EmblaCarousel.vue'
+import TopBar from './components/TopBar.vue'
 
 const categories = {
-  colors: ['Red', 'Green', 'Blue', 'Yellow'],
-  numbers: ['1', '2', '3', '4'],
-  letters: ['A', 'B', 'C', 'D'],
-  animals: ['Cat', 'Dog', 'Bear', 'Fox'],
+  colors: ['Red', 'Green', 'Blue', 'Yellow', 'Purple', 'Orange', 'Pink', 'Brown', 'Black', 'White'],
+  numbers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+  letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+  animals: ['Cat', 'Dog', 'Bear', 'Fox', 'Lion', 'Tiger', 'Elephant', 'Giraffe', 'Zebra', 'Kangaroo'],
 }
 
 function shuffle<T>(array: T[]): () => T {
@@ -44,6 +45,8 @@ function spinAll() {
 </script>
 
 <template>
+  <TopBar />
+
   <div class="grid grid-cols-2 gap-4 p-4">
     <EmblaCarousel ref="colorRef" :items="categories.colors" />
     <EmblaCarousel ref="numberRef" :items="categories.numbers" />
@@ -52,7 +55,7 @@ function spinAll() {
   </div>
 
   <div class="text-center mt-6">
-    <button @click="spinAll" class="bg-blue-600 text-white text-lg px-6 py-3 rounded">
+    <button @click="spinAll" class="btn bg-primary text-primary-content text-lg px-8 py-6 rounded-3xl">
       Spin All!
     </button>
   </div>
