@@ -47,22 +47,22 @@ function spinAll() {
 <template>
   <TopBar />
 
-  <main class="flex flex-col gap-20 mt-20 mx-auto p-4 justify-center-safe">
-    <div class="text-center mt-6">
+  <main class="flex flex-col gap-15 mt-10 mx-auto p-4 justify-center-safe">
+    <div class="text-center mt-4">
       <h1 class="text-4xl font-bold mb-4">
         Press the button to find out what you will learn today!
       </h1>
     </div>
   
-    <div class="grid grid-cols-2 gap-4 p-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
       <EmblaCarousel ref="colorRef" :items="categories.colors" />
       <EmblaCarousel ref="numberRef" :items="categories.numbers" />
       <EmblaCarousel ref="letterRef" :items="categories.letters" />
       <EmblaCarousel ref="animalRef" :items="categories.animals" />
     </div>
   
-    <div class="text-center mt-6">
-      <button @click="spinAll" class="btn bg-primary text-primary-content text-lg px-8 py-6 rounded-3xl">
+    <div class="text-center 2xl:mt-4">
+      <button @click="spinAll" class="btn btn-primary btn-wide text-primary-content text-lg px-8 py-6 rounded-3xl">
         Let's Learn!
       </button>
     </div>

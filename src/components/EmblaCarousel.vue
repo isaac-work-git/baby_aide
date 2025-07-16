@@ -29,12 +29,12 @@ defineExpose({ spinTo })
 </script>
 
 <template>
-  <div class="overflow-hidden w-full max-w-xs border" ref="viewportRef">
-    <div class="flex">
+  <div class="overflow-hidden w-full max-w-xs border rounded-xl shadow-xl" ref="viewportRef">
+    <div class="flex flex-row">
       <div
         v-for="(item, index) in props.items"
         :key="index"
-        class="min-w-full h-32 flex items-center justify-center text-2xl font-bold border-r bg-gray-100"
+        class="min-w-full h-32 flex items-center justify-center text-3xl font-bold bg-gray-100"
       >
         {{ item }}
       </div>
