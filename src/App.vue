@@ -47,7 +47,7 @@ function spinAll() {
 <template>
   <TopBar />
 
-  <main class="flex flex-col gap-15 mt-10 mx-auto p-4 justify-center-safe">
+  <main class="flex flex-col gap-5 md:gap-15 mt-10 mx-auto p-4 justify-center-safe">
     <div class="text-center mt-4">
       <h1 class="text-4xl font-bold mb-4">
         Press the button to find out what you will learn today!
